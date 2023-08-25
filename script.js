@@ -1,7 +1,6 @@
 $(function () {
   var currentDate = moment().format("dddd, MMMM D");
   $("#currentDay").text(currentDate);
-
   var container = $(".container-lg");
   var currentTime = moment().hour();
 
@@ -27,7 +26,7 @@ $(function () {
       localStorage.setItem(timeBlockId, userEvent);
     });
   }
-\
+
   function getTimeBlockClass(blockHour, currentHour) {
     if (blockHour < currentHour) {
       return "past";
@@ -38,7 +37,6 @@ $(function () {
     }
   }
 
-  
   function formatHour(hour) {
     return moment().hour(hour).format("hA");
   }
