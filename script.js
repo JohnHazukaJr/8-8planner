@@ -1,9 +1,7 @@
 $(function () {
-  // Display the current date in the header
   var currentDate = moment().format("dddd, MMMM D");
   $("#currentDay").text(currentDate);
 
-  // Populate timeblocks from 8 AM to 8 PM
   var container = $(".container-lg");
   var currentTime = moment().hour();
 
@@ -29,8 +27,7 @@ $(function () {
       localStorage.setItem(timeBlockId, userEvent);
     });
   }
-
-  // Get the appropriate class for the time block
+\
   function getTimeBlockClass(blockHour, currentHour) {
     if (blockHour < currentHour) {
       return "past";
@@ -41,7 +38,7 @@ $(function () {
     }
   }
 
-  // Format hour in 12-hour format with AM/PM indicator
+  
   function formatHour(hour) {
     return moment().hour(hour).format("hA");
   }
